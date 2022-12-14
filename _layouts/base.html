@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+{% include head.html %}
+
+<body class="{{ page.body-class }}">
+  <div class="usa-overlay"></div>
+
+  {% include header.html %}
+  <main id="main" tabindex="-1">
+    {{ content }}
+    <button onclick="topFunction()" id="backtotop" title="Go to top">&#708; Top</button>
+  </main>
+  {% include footer.html %}
+  <script>
+    window.onscroll = function() {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("backtotop").style.display = "block";
+      } else {
+        document.getElementById("backtotop").style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  {% include javascript.html %}
+</body>
+
+</html>

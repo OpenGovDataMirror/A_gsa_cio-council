@@ -1,0 +1,18 @@
+<section class="usa-graphic_list">
+{% for topic in site.fedit %}
+  {% assign half = forloop.index | modulo: 3 %}
+  {% if half == 1 %}
+  <div class="usa-width-one-whole usa-end-row usa-media_block">
+  {% else %}
+  <div class="usa-width-one-whole usa-media_block">
+  {% endif %}
+    <a href="{{ site.baseurl }}{{ topic.url }}"><img class="initiative-image" src="{{ topic.image | prepend: site.baseurl }}" alt="{{topic.img-alt}}"></a>
+      <h3>
+        <a href="{{ site.baseurl }}{{ topic.url }}">
+          {{ topic.title }}
+        </a>
+      </h3>
+      <p>{{ topic.description | strip_html | truncatewords:35  }}</p>
+  </div>
+{% endfor %}
+</section>

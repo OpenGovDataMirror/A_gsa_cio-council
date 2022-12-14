@@ -1,0 +1,50 @@
+assigned:
+    -
+        text: About
+        href:
+        permalink:
+        sectionid: basic-nav-section-one
+        show_in_menu: false
+        show_in_footer: true
+        children:
+          -
+              text: About the Council
+              permalink: /about/
+          -
+              text: Leadership & Members
+              permalink: /about/members-and-leadership/
+          -
+              text: Committees & Communities of Practice
+              permalink: /about/committees-affiliates/
+
+    -
+        text: Agenda
+        href: pages/cioc-priorities.md
+        permalink: /cioc-priorities/
+        show_in_menu: true
+        show_in_footer: true
+        sectionid: basic-nav-section-two
+        children:
+          -
+              text: Priorities
+              permalink: /agenda/priorities/
+          -
+              text: Initiatives
+              permalink: /agenda/initiatives/
+
+
+    -
+        text: Blog
+        href: pages/blog.md
+        permalink: /blog/
+        show_in_menu: true
+        show_in_footer: true
+    -
+        text: Resources
+        href: pages/resources.md
+        permalink: /resources/
+        show_in_menu: true
+        show_in_footer: true
+
+
+unassigned: []
